@@ -1,6 +1,18 @@
+import { ResolvingMetadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import NavLinks from '@/app/ui/nav-links';
+import { getPageTitle } from '@/app/lib/metadata';
+
+export const generateMetadata = async (
+  _props: unknown,
+  parent: ResolvingMetadata,
+) => {
+  const parentTitle = (await parent).title?.absolute;
+  return {
+    title: getPageTitle({ parentTitle, title: 'Courses' }),
+  };
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
