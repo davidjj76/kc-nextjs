@@ -9,7 +9,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, 'text-base')}>{children}</body>
+      <body className={clsx(inter.className, 'text-base-color')}>
+        {children}
+      </body>
     </html>
   );
 }
