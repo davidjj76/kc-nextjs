@@ -1,7 +1,7 @@
 import { ResolvingMetadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import NavLinks from '@/app/ui/nav-links';
+import NavLinks from '@/app/ui/components/nav-links';
 import { getPageTitle } from '@/app/lib/metadata';
 
 export const generateMetadata = async (
