@@ -1,9 +1,11 @@
 'use server';
 
 import { z } from 'zod';
-import * as courseDB from '@/app/lib/database';
+import * as db from '@/app/lib/database';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
+
+const generateSlug = (title: string) => title.toLowerCase().replace(/ /g, '-');
 
 const CreateCourseSchema = z.object({
   title: z.string().min(3).max(30),
@@ -11,25 +13,27 @@ const CreateCourseSchema = z.object({
 });
 
 export async function createCourse(formData: FormData) {
-  const course = CreateCourseSchema.parse(
+  const parsedFormData = CreateCourseSchema.parse(
     Object.fromEntries(formData.entries()),
   );
 
-  await courseDB.createCourse(course);
+  const slug = generateSlug(parsedFormData.title);
+  const course = { ...parsedFormData, slug };
+  await db.createCourse(course);
 
   revalidatePath('/courses');
   redirect('/courses');
 }
 
 export async function completeCourse(id: string) {
-  await courseDB.updateCourse(id, { done: true });
+  await db.updateCourse(id, { done: true });
 
   revalidatePath('/courses');
   redirect('/courses');
 }
 
 export async function deleteCourse(id: string) {
-  await courseDB.deleteCourse(id);
+  await db.deleteCourse(id);
 
   revalidatePath('/courses');
   redirect('/courses');

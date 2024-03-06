@@ -1,7 +1,6 @@
 'use client';
 
 import { completeCourse } from '@/app/lib/actions';
-import { getCourseBySlug } from '@/app/lib/database';
 import { Prisma } from '@prisma/client';
 
 export default function CompleteCourse({

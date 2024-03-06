@@ -3,7 +3,6 @@ import { getCourses } from '@/app/lib/database';
 
 export default async function Page() {
   const courses = await getCourses();
-  console.log(courses);
 
   return (
     <>
