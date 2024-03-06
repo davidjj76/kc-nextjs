@@ -13,13 +13,23 @@ const CreateCourseSchema = z.object({
 });
 
 export async function createCourse(formData: FormData) {
-  const parsedFormData = CreateCourseSchema.parse(
-    Object.fromEntries(formData.entries()),
-  );
+  let parsedFormData: z.infer<typeof CreateCourseSchema>;
 
-  const slug = generateSlug(parsedFormData.title);
-  const course = { ...parsedFormData, slug };
-  await db.createCourse(course);
+  try {
+    parsedFormData = CreateCourseSchema.parse(
+      Object.fromEntries(formData.entries()),
+    );
+  } catch (error) {
+    throw new Error('Invalid course data');
+  }
+
+  try {
+    const slug = generateSlug(parsedFormData.title);
+    const course = { ...parsedFormData, slug };
+    await db.createCourse(course);
+  } catch (error) {
+    throw new Error('Course with this title already exists');
+  }
 
   revalidatePath('/courses');
   redirect('/courses');
