@@ -1,6 +1,5 @@
 import '@/app/ui/global.css';
 
-import clsx from 'clsx';
 import { Metadata } from 'next';
 import { inter } from '@/app/ui/fonts';
 
@@ -17,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, 'text-base-color')}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

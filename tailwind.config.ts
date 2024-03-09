@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-import colors from 'tailwindcss/colors';
 
 const config: Config = {
   content: [
@@ -7,12 +6,11 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    borderColor: { DEFAULT: colors.gray[200] },
-    colors: {
-      'base-color': colors.gray[800],
-      'accent-color': colors.orange[600],
-      'header-bg-color': colors.slate[900],
-      'header-text-color': colors.gray[200],
+    extend: {
+      colors: {
+        primary: '#f06915',
+        secondary: '#159cf0',
+      },
     },
   },
   plugins: [],
