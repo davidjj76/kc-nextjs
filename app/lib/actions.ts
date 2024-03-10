@@ -9,7 +9,7 @@ const generateSlug = (title: string) => title.toLowerCase().replace(/ /g, '-');
 
 const CreateCourseSchema = z.object({
   title: z.string().min(3).max(30),
-  description: z.string().min(3).max(100),
+  description: z.string().min(3),
 });
 
 export async function createCourse(formData: FormData) {
