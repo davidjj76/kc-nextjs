@@ -4,12 +4,13 @@ const prisma = new PrismaClient();
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-export function getCourses() {
+export async function getCourses() {
+  await sleep(1000);
   return prisma.course.findMany();
 }
 
 export async function getCourseBySlug(slug: string) {
-  await sleep(3000);
+  await sleep(1000);
   return prisma.course.findUniqueOrThrow({
     where: { slug },
   });
