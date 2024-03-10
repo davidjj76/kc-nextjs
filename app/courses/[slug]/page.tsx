@@ -1,6 +1,6 @@
 import { deleteCourse } from '@/app/lib/actions';
 import { getCourseBySlug } from '@/app/lib/database';
-import CompleteCourse from '@/app/ui/components/complete-course';
+import CompleteCourse from '@/app/ui/complete-course';
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const course = await getCourseBySlug(params.slug);
