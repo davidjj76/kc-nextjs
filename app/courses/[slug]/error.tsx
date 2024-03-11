@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function Error({
   error,
   reset,
@@ -15,12 +17,12 @@ export default function Error({
         </h2>
         <p className="mt-2 text-lg leading-8 text-error">{error.message}</p>
       </div>
-      <button
-        className="rounded-md bg-error px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
-        onClick={() => reset()}
+      <Link
+        href="/courses"
+        className="rounded-md bg-error px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
       >
-        Retry
-      </button>
+        Go to courses catalog <span aria-hidden="true">→</span>
+      </Link>
     </div>
   );
 }
