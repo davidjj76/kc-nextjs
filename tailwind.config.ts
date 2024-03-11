@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss';
 
+const colors = require('tailwindcss/colors');
+
 const config: Config = {
   content: [
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,6 +12,7 @@ const config: Config = {
       colors: {
         primary: '#f06915',
         secondary: '#159cf0',
+        error: colors.red[500],
       },
     },
   },
