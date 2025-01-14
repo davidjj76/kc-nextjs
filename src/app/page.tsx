@@ -1,18 +1,6 @@
-import { ResolvingMetadata } from 'next';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { lusitana } from '@/ui/fonts';
-import { getPageTitle } from '@/lib/metadata';
-
-export const generateMetadata = async (
-  _props: unknown,
-  parent: ResolvingMetadata,
-) => {
-  const parentTitle = (await parent).title?.absolute;
-  return {
-    title: getPageTitle({ parentTitle, title: 'Home' }),
-  };
-};
 
 export default function Home() {
   return (
