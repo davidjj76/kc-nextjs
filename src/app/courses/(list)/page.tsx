@@ -50,7 +50,7 @@ export default async function Page() {
 const emptyState = (
   <div className="flex mt-10 sm:mt-16 border-t border-gray-200">
     <div className="flex flex-col items-center mx-auto p-6 mt-6 border-2 border-dashed rounded-md">
-      <AcademicCapIcon className="w-12 h-12 text-secondary" mt-6 />
+      <AcademicCapIcon className="w-12 h-12 text-secondary" />
       <h3 className="text-sm font-semibold mt-3">No courses available</h3>
       <p className="text-sm mt-1 text-gray-500">
         Get started by creating a new course.
