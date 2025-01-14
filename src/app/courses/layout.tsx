@@ -1,15 +1,8 @@
-import { ResolvingMetadata } from 'next';
-import { getPageTitle } from '@/lib/metadata';
+import { Metadata } from 'next';
 import Header from '@/ui/components/header';
 
-export const generateMetadata = async (
-  _props: unknown,
-  parent: ResolvingMetadata,
-) => {
-  const parentTitle = (await parent).title?.absolute;
-  return {
-    title: getPageTitle({ parentTitle, title: 'Courses' }),
-  };
+export const metadata: Metadata = {
+  title: 'Courses',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
