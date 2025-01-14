@@ -1,4 +1,4 @@
-import NavLink from './nav-link';
+import NavLink from "./nav-link";
 
 export default function NavLinks({
   links,
@@ -6,11 +6,11 @@ export default function NavLinks({
   links: Array<{ href: string; children: React.ReactNode }>;
 }) {
   return (
-    <ul className="sm:flex gap-x-12">
-      {links.map(link => (
+    <ul className="gap-x-12 sm:flex">
+      {links.map((link) => (
         <li
           key={link.href}
-          className="max-sm:-mx-3 max-sm:rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 max-sm:hover:bg-gray-800 sm:text-sm sm:leading-6 sm:p-0"
+          className="px-3 py-2 text-base font-semibold leading-7 text-gray-100 max-sm:-mx-3 max-sm:rounded-lg max-sm:hover:bg-gray-800 sm:p-0 sm:text-sm sm:leading-6"
         >
           <NavLink href={link.href}>{link.children}</NavLink>
         </li>

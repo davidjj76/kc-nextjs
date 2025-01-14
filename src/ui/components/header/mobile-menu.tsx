@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { createContext, useContext, useMemo, useState } from 'react';
-import { Dialog as HeadlessDialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { createContext, useContext, useMemo, useState } from "react";
+import { Dialog as HeadlessDialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const valueContext = createContext(false);
 

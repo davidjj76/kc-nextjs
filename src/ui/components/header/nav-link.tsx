@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import clsx from 'clsx';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import clsx from "clsx";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function NavLink({
   href,
@@ -15,7 +15,7 @@ export default function NavLink({
   return (
     <Link
       href={href}
-      className={clsx('underline-offset-4', {
+      className={clsx("underline-offset-4", {
         underline: pathname === href,
       })}
     >

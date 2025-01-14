@@ -1,15 +1,15 @@
-import '@/ui/global.css';
+import "@/ui/global.css";
 
-import { Metadata } from 'next';
-import { inter } from '@/ui/fonts';
+import { Metadata } from "next";
+import { inter } from "@/ui/fonts";
 
 export const metadata: Metadata = {
   title: {
-    template: 'KC Next.js | %s',
-    default: 'KC Next.js | Home',
+    template: "KC Next.js | %s",
+    default: "KC Next.js | Home",
   },
-  description: 'Keepcoding Next.js in react advanced module',
-  keywords: ['Keepcoding', 'next.js', 'react'],
+  description: "Keepcoding Next.js in react advanced module",
+  keywords: ["Keepcoding", "next.js", "react"],
 };
 
 export default function RootLayout({

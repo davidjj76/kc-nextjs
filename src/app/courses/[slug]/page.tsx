@@ -1,6 +1,6 @@
-import { deleteCourse } from '@/lib/actions';
-import { getCourseBySlug } from '@/lib/database';
-import CompleteCourse from '@/ui/complete-course';
+import { deleteCourse } from "@/lib/actions";
+import { getCourseBySlug } from "@/lib/database";
+import CompleteCourse from "@/ui/complete-course";
 
 export default async function Page({
   params,

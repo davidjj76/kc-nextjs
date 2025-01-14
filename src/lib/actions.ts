@@ -1,11 +1,11 @@
-'use server';
+"use server";
 
-import { z } from 'zod';
-import * as db from '@/lib/database';
-import { revalidatePath } from 'next/cache';
-import { redirect } from 'next/navigation';
+import { z } from "zod";
+import * as db from "@/lib/database";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
-const generateSlug = (title: string) => title.toLowerCase().replace(/ /g, '-');
+const generateSlug = (title: string) => title.toLowerCase().replace(/ /g, "-");
 
 const CreateCourseSchema = z.object({
   title: z.string().min(3).max(30),
@@ -20,7 +20,7 @@ export async function createCourse(formData: FormData) {
       Object.fromEntries(formData.entries()),
     );
   } catch (error) {
-    throw new Error('Invalid course data');
+    throw new Error("Invalid course data");
   }
 
   try {
@@ -28,23 +28,23 @@ export async function createCourse(formData: FormData) {
     const course = { ...parsedFormData, slug };
     await db.createCourse(course);
   } catch (error) {
-    throw new Error('Course with this title already exists');
+    throw new Error("Course with this title already exists");
   }
 
-  revalidatePath('/courses');
-  redirect('/courses');
+  revalidatePath("/courses");
+  redirect("/courses");
 }
 
 export async function completeCourse(id: string) {
   await db.updateCourse(id, { done: true });
 
-  revalidatePath('/courses');
-  redirect('/courses');
+  revalidatePath("/courses");
+  redirect("/courses");
 }
 
 export async function deleteCourse(id: string) {
   await db.deleteCourse(id);
 
-  revalidatePath('/courses');
-  redirect('/courses');
+  revalidatePath("/courses");
+  redirect("/courses");
 }

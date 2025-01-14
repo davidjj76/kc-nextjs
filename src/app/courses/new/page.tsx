@@ -1,4 +1,4 @@
-import { createCourse } from '@/lib/actions';
+import { createCourse } from "@/lib/actions";
 
 export default async function Page() {
   return (
