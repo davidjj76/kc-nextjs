@@ -1,8 +1,8 @@
 import { ResolvingMetadata } from 'next';
 import Link from 'next/link';
 import clsx from 'clsx';
-import { lusitana } from '@/app/ui/fonts';
-import { getPageTitle } from '@/app/lib/metadata';
+import { lusitana } from '@/ui/fonts';
+import { getPageTitle } from '@/lib/metadata';
 
 export const generateMetadata = async (
   _props: unknown,

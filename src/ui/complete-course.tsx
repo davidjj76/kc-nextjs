@@ -1,6 +1,6 @@
 'use client';
 
-import { completeCourse } from '@/app/lib/actions';
+import { completeCourse } from '@/lib/actions';
 
 export default function CompleteCourse({ courseId }: { courseId: string }) {
   const completeCourseWithId = completeCourse.bind(null, courseId);

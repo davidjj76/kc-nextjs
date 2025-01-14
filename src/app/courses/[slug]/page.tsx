@@ -1,9 +1,14 @@
-import { deleteCourse } from '@/app/lib/actions';
-import { getCourseBySlug } from '@/app/lib/database';
-import CompleteCourse from '@/app/ui/complete-course';
+import { deleteCourse } from '@/lib/actions';
+import { getCourseBySlug } from '@/lib/database';
+import CompleteCourse from '@/ui/complete-course';
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const course = await getCourseBySlug(params.slug);
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const slug = (await params).slug;
+  const course = await getCourseBySlug(slug);
   const deleteCourseWithId = deleteCourse.bind(null, course.id);
 
   return (

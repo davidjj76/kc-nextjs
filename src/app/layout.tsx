@@ -1,7 +1,7 @@
-import '@/app/ui/global.css';
+import '@/ui/global.css';
 
 import { Metadata } from 'next';
-import { inter } from '@/app/ui/fonts';
+import { inter } from '@/ui/fonts';
 
 export const metadata: Metadata = {
   title: 'KC Next.js',

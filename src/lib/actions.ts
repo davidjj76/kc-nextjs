@@ -1,7 +1,7 @@
 'use server';
 
 import { z } from 'zod';
-import * as db from '@/app/lib/database';
+import * as db from '@/lib/database';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 

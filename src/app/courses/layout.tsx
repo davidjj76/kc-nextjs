@@ -1,6 +1,6 @@
 import { ResolvingMetadata } from 'next';
-import { getPageTitle } from '@/app/lib/metadata';
-import Header from '@/app/ui/components/header';
+import { getPageTitle } from '@/lib/metadata';
+import Header from '@/ui/components/header';
 
 export const generateMetadata = async (
   _props: unknown,

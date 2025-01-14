@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getCourses } from '@/app/lib/database';
+import { getCourses } from '@/lib/database';
 import { AcademicCapIcon } from '@heroicons/react/24/outline';
 
 export default async function Page() {
