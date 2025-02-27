@@ -10,7 +10,7 @@ export default function NavLinks({
       {links.map((link) => (
         <li
           key={link.href}
-          className="px-3 py-2 text-base font-semibold leading-7 text-gray-100 max-sm:-mx-3 max-sm:rounded-lg max-sm:hover:bg-gray-800 sm:p-0 sm:text-sm sm:leading-6"
+          className="px-3 py-2 text-base leading-7 font-semibold text-gray-100 max-sm:-mx-3 max-sm:rounded-lg max-sm:hover:bg-gray-800 sm:p-0 sm:text-sm sm:leading-6"
         >
           <NavLink href={link.href}>{link.children}</NavLink>
         </li>

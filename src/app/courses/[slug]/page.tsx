@@ -14,7 +14,7 @@ export default async function Page({
   return (
     <div>
       <div className="mx-auto lg:mx-0">
-        <h2 className="text-2xl font-bold tracking-tight text-primary sm:text-4xl">
+        <h2 className="text-primary text-2xl font-bold tracking-tight sm:text-4xl">
           {course.title}
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
@@ -26,7 +26,7 @@ export default async function Page({
         <form action={deleteCourseWithId}>
           <button
             type="submit"
-            className="rounded-md bg-error px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
+            className="bg-error focus-visible:outline-secondary rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             Delete
           </button>
