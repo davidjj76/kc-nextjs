@@ -26,7 +26,7 @@ export default async function Page({
         <form action={deleteCourseWithId}>
           <button
             type="submit"
-            className="rounded-md bg-error px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
+            className="rounded-md bg-error px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
           >
             Delete
           </button>
