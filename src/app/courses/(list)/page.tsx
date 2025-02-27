@@ -58,7 +58,7 @@ const emptyState = (
       <div className="mt-6 mb-3">
         <Link
           href="/courses/new"
-          className="bg-primary focus-visible:outline-secondary rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          className="bg-primary focus-visible:outline-secondary rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-600 focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           Create a new course <span aria-hidden="true">→</span>
         </Link>

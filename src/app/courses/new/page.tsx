@@ -59,13 +59,13 @@ export default async function Page() {
       <div className="mt-6 flex items-center justify-end gap-x-6">
         <button
           type="reset"
-          className="focus-visible:outline-secondary rounded-md px-3 py-2 text-sm font-semibold text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          className="focus-visible:outline-secondary rounded-md px-3 py-2 text-sm font-semibold text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           Reset
         </button>
         <button
           type="submit"
-          className="bg-primary focus-visible:outline-secondary rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          className="bg-primary focus-visible:outline-secondary rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-orange-600 focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           Save
         </button>

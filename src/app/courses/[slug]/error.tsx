@@ -19,7 +19,7 @@ export default function Error({
       </div>
       <Link
         href="/courses"
-        className="bg-error focus-visible:outline-secondary mt-4 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+        className="bg-error focus-visible:outline-secondary mt-4 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-red-600 focus-visible:outline-2 focus-visible:outline-offset-2"
       >
         Go to courses catalog <span aria-hidden="true">→</span>
       </Link>

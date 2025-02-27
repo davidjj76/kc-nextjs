@@ -25,7 +25,7 @@ export default function Home() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/courses"
-                className="bg-primary focus-visible:outline-secondary rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="bg-primary focus-visible:outline-secondary rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-600 focus-visible:outline-2 focus-visible:outline-offset-2"
               >
                 Go to courses catalog <span aria-hidden="true">→</span>
               </Link>

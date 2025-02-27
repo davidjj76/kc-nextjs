@@ -16,7 +16,7 @@ export default function Error({
         <p className="text-error mt-2 text-lg leading-8">{error.message}</p>
       </div>
       <button
-        className="bg-error focus-visible:outline-secondary mt-4 w-full rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-0 sm:w-auto"
+        className="bg-error focus-visible:outline-secondary mt-4 w-full rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-600 focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-0 sm:w-auto"
         onClick={() => reset()}
       >
         Retry
